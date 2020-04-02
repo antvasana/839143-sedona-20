@@ -1,0 +1,47 @@
+.container {
+  margin: 0 auto;
+  width: 320px;
+
+  .main-font();
+  font-family: @fancy-font, "Arial", sans-serif;
+  text-align: @main-text-align;
+  text-transform: @main-text-transform;
+  border: 1px solid #cccccc;
+
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+
+    /*background-color: @bg-lightgrey;*/
+    box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.2);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.btn {
+  font-family: inherit;
+  text-transform: inherit;
+  border: none;
+
+  cursor: pointer;
+}

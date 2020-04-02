@@ -1,0 +1,132 @@
+.site-list {
+  .list-reset();
+
+  font-size: @main-font-size;
+  line-height: @big-line-height;
+
+  &__item {
+    background-color: @main-color;
+    border-bottom: 1px solid @main-color-dark;
+    border-top: 1px solid @main-color-light;
+  }
+
+  &__item:nth-child(1) {
+    border-top: none;
+  }
+
+  &__item:nth-child(4) {
+    border-bottom: none;
+  }
+
+  &__item a {
+    display: block;
+    padding-top: 14px;
+    padding-bottom: 15px;
+
+    font-weight: bold;
+    .set-color(#ffffff);
+
+    @media (min-width: @tablet-width) {
+      display: inline;
+
+      .set-color(#000000);
+    }
+  }
+
+  &__item a:hover {
+    background-color: #669ec0;
+
+    @media (min-width: @tablet-width) {
+      color: @main-color;
+      background-color: transparent;
+    }
+  }
+
+  &__item a:active {
+    color: rgb(148, 185, 210);
+    background-color: #5496bd;
+
+    @media (min-width: @tablet-width) {
+      color: rgba(0, 0, 0, 0.3);
+      background-color: transparent;
+    }
+  }
+
+  &__item .current {
+    @media (min-width: @tablet-width) {
+      color: #584c44;
+    }
+  }
+
+  &__item .current:hover {
+    @media (min-width: @tablet-width) {
+      color: #604e43;
+    }
+  }
+
+  &__item .current:active {
+    @media (min-width: @tablet-width) {
+      color: rgba(118, 99, 87, 0.3);
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-bottom: 0;
+    width: auto;
+
+    font-size: @small-font-size;
+    line-height: @main-line-height;
+
+    &__item {
+      padding-top: 18px;
+      padding-bottom: 12px;
+      width: 20%;
+
+      background-color: transparent;
+      border-bottom: none;
+      border-top: none;
+    }
+
+    &__item:nth-child(1) {
+      margin-left: 20px;
+      margin-right: 10px;
+    }
+
+    &__item:nth-child(2) {
+      margin-right: 60px;
+    }
+
+    &__item:nth-child(3) {
+      margin-left: 50px;
+      margin-right: 10px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &__item:nth-child(1) {
+      margin-right: 0;
+      padding-left: 88px;
+      padding-right: 70px;
+    }
+
+    &__item:nth-child(2) {
+      padding-left: 50px;
+      padding-right: 70px;
+    }
+
+    &__item:nth-child(3) {
+      margin-right: 0;
+      padding-left: 50px;
+      padding-right: 67px;
+    }
+
+    &__item:nth-child(4) {
+      padding-left: 70px;
+      padding-right: 70px;
+    }
+  }
+}

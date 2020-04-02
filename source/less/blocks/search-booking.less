@@ -1,0 +1,104 @@
+.search-booking {
+
+  &__map picture {
+    position: relative;
+  }
+
+  &__map picture::before {
+    content: "";
+    position: absolute;
+    bottom: 170px;
+    left: 45%;
+
+    width: 27px;
+    height: 27px;
+
+    background-image: url("../img/icon-map-marker.svg");
+    background-repeat: no-repeat;
+    border-radius: 50%;
+
+    @media (min-width: @tablet-width) {
+      bottom: 165px;
+      left: 48%;
+    }
+
+    @media (min-width: @desktop-width) {
+      bottom: 165px;
+      left: 48.5%;
+    }
+  }
+
+  & h2 {
+    font-size: @big-font-size;
+    line-height: @big-line-height;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 30px;
+
+      font-size: @biggest-font-size;
+      line-height: @main-line-height;
+    }
+  }
+
+  &__trip-date {
+    margin-bottom: 40px;
+    margin-left: 14px;
+    margin-right: 14px;
+
+    font-size: @small-font-size;
+    line-height: @main-line-height;
+
+    @media (min-width: @tablet-width) {
+      margin-left: 150px;
+      margin-right: 150px;
+
+      line-height: @medium-line-height;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-left: 370px;
+      margin-right: 370px;
+    }
+  }
+
+  &__trip-date span {
+    @media (min-width: @tablet-width) {
+      margin-left: 70px;
+      margin-right: 80px;
+    }
+  }
+
+  &__button {
+    display: block;
+
+    margin: 0 auto;
+    margin-bottom: 49px;
+    padding: 18px 47px;
+    width: 280px;
+
+    font-size: @big-font-size;
+    line-height: @main-line-height;
+    font-weight: bold;
+    color: @another-text-color;
+    background-color: @main-color;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 58px;
+      width: 458px;
+    }
+  }
+
+  &__button:hover {
+    background-color: #669ec0;
+  }
+
+  &__button:focus,
+  &__button:active {
+    color: rgb(148, 185, 210);
+    background-color: #5496bd;
+  }
+
+  &__button[disabled] {
+    background-color: #e5e5e5;
+  }
+}
